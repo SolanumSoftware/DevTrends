@@ -1,3 +1,17 @@
-<GridLayout>
+<!-- <GridLayout>
   <page-router-outlet></page-router-outlet>
-</GridLayout>
+</GridLayout> -->
+
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+  <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+    <StackLayout class="sideTitleStackLayout">
+      <Label text="Navigation Menu"></Label>
+    </StackLayout>
+    <ScrollView row="1">
+        <menu></menu>
+    </ScrollView>
+  </GridLayout>
+  <StackLayout tkMainContent>
+    <page-router-outlet></page-router-outlet>
+  </StackLayout>
+</RadSideDrawer>

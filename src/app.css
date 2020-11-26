@@ -23,3 +23,60 @@ The following CSS rule changes the font size of all Buttons that have the
 Button.-primary {
     font-size: 18;
 }
+
+.BackEnd {
+    color: rgb(51, 51, 51);
+}
+
+.FrontEnd {
+    color: #4C36D7;
+}
+
+.DevOps {
+    color: #36D7B0;
+}
+
+.Manifests{
+    color: #36CDD7;
+}
+
+.Database {
+    color: #369DD7;
+}
+
+.Testing {
+    color: #A3D736;
+}
+
+.Networks {
+    color: #FA15FF;
+}
+
+.Movil {
+    color: #FFBA07;
+}
+
+.TeamWork {
+    color: #36D74F;
+}
+
+.BI {
+    color: #D7A036;
+}
+
+.IA {
+    color: #D73670;
+}
+
+.Managment {
+    color: #F02323;
+}
+
+.BigData {
+    color: #D73696;
+}
+
+.Agile {
+    color: #9936D7;
+}
+/*colocar en app.css*/

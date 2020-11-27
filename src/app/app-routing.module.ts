@@ -1,9 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "@nativescript/angular";
+import { IndexComponent } from "./index/index.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
+    { path: "", redirectTo: "index", pathMatch: "full" },
+    { path: "index", component: IndexComponent }
 ];
 
 @NgModule({

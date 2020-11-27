@@ -79,4 +79,35 @@ Button.-primary {
 .Agile {
     color: #9936D7;
 }
-/*colocar en app.css*/
+.sideTitleStackLayout {
+    padding: 10;
+    margin-top: 15;
+    text-align: center;
+}
+
+.Logo-Hash, .Logo-Dev, .Logo-Trends {
+    font-size: 30;
+}
+
+.Logo-Hash {
+    color: #5B48CF;
+    font-weight: bold;
+}
+
+.Logo-Dev {
+    font-weight: bold;
+    color: #383737;
+}
+
+.Logo-Trends {
+    font-weight: 200;
+    font-style: italic;
+}
+
+.All {
+    color: darkcyan;
+}
+
+.fa {
+    font-family: 'fontawesome-webfont';
+}

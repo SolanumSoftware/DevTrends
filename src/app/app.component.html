@@ -1,14 +1,16 @@
-<!-- <GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout> -->
-
 <RadSideDrawer tkExampleTitle tkToggleNavButton>
-  <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+  <GridLayout tkDrawerContent rows="75, *" class="sideStackLayout">
     <StackLayout class="sideTitleStackLayout">
-      <Label text="Navigation Menu"></Label>
+      <Label>
+        <FormattedString>
+          <Span text="#" class="Logo-Hash"></Span>
+          <Span text="Dev" class="Logo-Dev"></Span>
+          <Span text="Trends" class="Logo-Trends"></Span>
+        </FormattedString>
+      </Label>
     </StackLayout>
     <ScrollView row="1">
-        <menu></menu>
+      <menu></menu>
     </ScrollView>
   </GridLayout>
   <StackLayout tkMainContent>

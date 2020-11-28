@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ObservableArray } from "@nativescript/core/data/observable-array";
 import { listamarkdown } from '../../models/listaMarkdown.model';
 
 @Component({
@@ -8,10 +9,15 @@ import { listamarkdown } from '../../models/listaMarkdown.model';
 })
 
 export class ListarMarkdownComponent implements OnInit {
-	Listarmarkwoen: listamarkdown[] = [
+
+	Listarmarkdown: listamarkdown[] = [
 		{ title: "Bases de datos cuadrante de gartner 2020", descripction: "Cuadrante de gartner 2020 databases" },
 		{ title: "Bases de datos cuadrante de gartner 2020", descripction: "Cuadrante de gartner 2020 databases" }]
+	datamarkdown = new ObservableArray<listamarkdown>();
 
 	constructor() { }
-	ngOnInit() { }
+
+	ngOnInit() {
+		this.datamarkdown.push(this.Listarmarkdown);
+	}
 }

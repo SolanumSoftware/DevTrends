@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MENU_OPTIONS } from "../categorys.model"
+import {Category, MENU_OPTIONS } from "../categorys.model"
+import { MenuService } from '../menu.service';
 @Component({
 	selector: 'menu',
 	templateUrl: './menu.component.html',
@@ -8,8 +9,16 @@ import {MENU_OPTIONS } from "../categorys.model"
 
 export class MenuComponent implements OnInit {
 
+	public selected: Category = 'All'; 
 	public ListOptions = MENU_OPTIONS;
-	constructor() { }
+	constructor(
+		private menuService: MenuService
+	) { }
 
 	ngOnInit() { }
+
+	select(taped: Category) {
+		this.selected = taped;
+		this.menuService.OptionTaped.emit(taped);
+	}
 }

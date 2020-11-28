@@ -1,5 +1,5 @@
 <StackLayout>
-    <Label *ngFor="let item of ListOptions"  class="itemMenu">
+    <Label *ngFor="let item of ListOptions" [ngClass]="{active: selected == item.category }"  class="itemMenu" (tap)="select(item.category)">
         <FormattedString>
             <Span text="#&ensp;" class="{{item.category}} icons-menu"></Span>
             <Span text="{{item.name}}" class="text-menu"></Span>

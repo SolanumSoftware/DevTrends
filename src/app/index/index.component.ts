@@ -16,5 +16,8 @@ export class IndexComponent implements OnInit {
 
 	openMenu() {
 		this.serviceMenu.MenuEvent.emit(true);
+		this.serviceMenu.OptionTaped.subscribe(response => {
+
+		});
 	}
 }

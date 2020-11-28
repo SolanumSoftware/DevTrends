@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { IndexComponent } from "./index/index.component";
 import { MenuComponent } from "./menu/menu.component";
-
+import { ListarMarkdownComponent } from './listar-markdown/listar-markdown.component';
 @NgModule({
     bootstrap: [
         AppComponent
@@ -18,7 +18,9 @@ import { MenuComponent } from "./menu/menu.component";
     declarations: [
         AppComponent,
         IndexComponent,
-        MenuComponent
+        MenuComponent,
+        ListarMarkdownComponent
+
     ],
     providers: [],
     schemas: [

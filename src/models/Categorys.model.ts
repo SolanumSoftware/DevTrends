@@ -1,4 +1,4 @@
-export type Category = 'All' | 'BackEnd' | 'FrontEnd' | 'DevOps' | 'Manifests' | 'Database' | 'Testing' | 'Networks' | 'Movil' | 'TeamWork' | 'BI' | 'IA' | 'Managment' | 'BigData' | 'Agile';
+import { Category } from "../Types/category.types";
 export interface MenuOptions {
     name: string;
     category: Category;

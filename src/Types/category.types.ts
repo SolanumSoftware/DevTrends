@@ -1,0 +1,1 @@
+export type Category = 'All' | 'BackEnd' | 'FrontEnd' | 'DevOps' | 'Manifests' | 'Database' | 'Testing' | 'Networks' | 'Movil' | 'TeamWork' | 'BI' | 'IA' | 'Managment' | 'BigData' | 'Agile';

@@ -10,7 +10,14 @@ import { Articles } from '../../models/Articles.model';
 
 export class ListarMarkdownComponent implements OnInit {
 
-	Listarmarkdown: Articles[] = [];
+	Listarmarkdown: Articles[] = [
+		{ tittle: "hola mundo", description: "hola mundo", category: "Agile",datePublish: "lo que sea", urlFile:"url" },
+		{ tittle: "hola mundo", description: "hola mundo", category: "BI",datePublish: "lo que sea", urlFile:"url" },
+		{ tittle: "hola mundo", description: "hola mundo", category: "BackEnd",datePublish: "lo que sea", urlFile:"url" },
+		{ tittle: "hola mundo", description: "hola mundo", category: "Agile",datePublish: "lo que sea", urlFile:"url" },
+		{ tittle: "hola mundo", description: "hola mundo", category: "Agile",datePublish: "lo que sea", urlFile:"url" },
+		{ tittle: "hola mundo", description: "hola mundo dsaldksañknañsnkadñadñsmdsadlkasñdsañldkdlasdsadñksadsadjasdlñkasjdlsdkasjdlskdjasldkasjdlskadjasdlksjdsakldjsdlksadjhsadlksdhsakldhaslkdjña", category: "Agile",datePublish: "lo que sea", urlFile:"url" }
+	];
 	dataSource = new ObservableArray<Articles>();
 
 	constructor() { }

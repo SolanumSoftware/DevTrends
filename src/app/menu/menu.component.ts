@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MENU_OPTIONS } from "../categorys.model"
+import {MENU_OPTIONS } from "../../models/Categorys.model";
+
 @Component({
 	selector: 'menu',
 	templateUrl: './menu.component.html',

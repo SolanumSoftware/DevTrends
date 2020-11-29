@@ -3,11 +3,15 @@
     padding-left: 20;
 }
 
-.icons-menu {
+.icon-item {
     font-size: 20;
     font-weight: bold;
 }
 
-.text-menu {
+.title-item, .desc-item {
+    font-size: 17;
+}
+
+.desc-item {
     font-size: 17;
 }

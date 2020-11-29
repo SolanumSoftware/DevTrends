@@ -1,11 +1,10 @@
 <index></index>
 <RadListView #listView [items]="datamarkdown" backgroundColor="white">
     <ng-template let-item="item">
-        <GridLayout pageTransition="slide" rows="*,auto" columns="*">
-
-            <Span text="#&ensp;" class="icons-menu"></Span>
-            <Label text="{{item.title}}" class="text-menu"></Label>
-
+        <GridLayout rows="*" columns="15, *">
+            <label row="0" col="0" text="#"  class="icon-item {{item.category}}"></label>
+            <Label row="0" col="1" text="{{item.tittle}}" class="title-item"></Label>
+            <label row="0" col="1" text="{{item.description}}" class="desc-item f-mono"></label>
         </GridLayout>
     </ng-template>
 </RadListView>

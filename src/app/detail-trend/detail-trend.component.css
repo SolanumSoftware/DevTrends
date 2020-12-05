@@ -28,8 +28,6 @@
     font-style: italic;
 }
 
-.icon-bar {
-    color: #5B48CF;
-    text-align: center;
-    font-size: 17;
+.icon-msg {
+    font-size: 50;
 }

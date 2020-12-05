@@ -2,6 +2,8 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule, NativeScriptFormsModule } from "@nativescript/angular";
 import { IndexComponent } from "./index.component";
 import { IndexRoutingModule } from "./index.routes";
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
+import { ListArticlesComponent } from "../list-articles/list-articles.component";
 
 @NgModule({
     schemas: [
@@ -10,10 +12,11 @@ import { IndexRoutingModule } from "./index.routes";
     imports: [
         NativeScriptCommonModule,
         NativeScriptFormsModule,
-        IndexRoutingModule
+        IndexRoutingModule,
+        NativeScriptUIListViewModule
     ],
     exports: [],
-    declarations: [IndexComponent],
+    declarations: [IndexComponent, ListArticlesComponent],
     providers: [],
 })
 

@@ -2,13 +2,14 @@ import { Component, AfterViewInit, OnInit, ViewChild, ChangeDetectorRef } from "
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 import { MenuService } from "./menu.service";
+import * as Admob from "nativescript-admob";
 
 @Component({
     selector: "ns-app",
     templateUrl: "./app.component.html"
 })
 export class AppComponent implements AfterViewInit ,OnInit {
-
+    
 	@ViewChild(RadSideDrawerComponent, { static: false }) public drawerComponent: RadSideDrawerComponent;
     private drawer: RadSideDrawer;
 	constructor(
@@ -23,6 +24,7 @@ export class AppComponent implements AfterViewInit ,OnInit {
 
 	ngOnInit() {
         this.menuService.MenuEvent.subscribe(Response => Response ? this.openDrawer(): this.onCloseDrawerTap());
+        
     }
 
 	

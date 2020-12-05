@@ -115,3 +115,9 @@ Button.-primary {
 .f-mono {
     font-family: 'RobotoMono';    
 }
+
+.icon-bar {
+    color: #5B48CF;
+    text-align: left;
+    font-size: 17;
+}

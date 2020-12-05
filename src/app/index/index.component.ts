@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MenuService } from "../menu.service";
+
 @Component({
 	selector: 'index',
 	templateUrl: './index.component.html',
 	styleUrls: ['./index.component.css']
 })
 
-export class IndexComponent implements OnInit {
-
+export class IndexComponent implements OnInit, AfterViewInit {
+	
 	constructor(
-		private serviceMenu: MenuService 
-	) { }
+		private serviceMenu: MenuService
+	) { 
+		
+	}
+	ngAfterViewInit(): void {
+		
+	}
 
-	ngOnInit() { }
+	ngOnInit() { 
+		
+	}
 
 	openMenu() {
 		this.serviceMenu.MenuEvent.emit(true);
@@ -20,4 +28,8 @@ export class IndexComponent implements OnInit {
 
 		});
 	}
+
+	
+    
+	
 }

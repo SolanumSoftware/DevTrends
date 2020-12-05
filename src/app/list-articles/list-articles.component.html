@@ -1,5 +1,4 @@
-<index></index>
-<RadListView #listView [items]="dataSource" backgroundColor="white" class="list-items">
+<RadListView #listView [items]="dataSource" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" backgroundColor="white" class="list-items">
     <ng-template let-item="item">
         <GridLayout rows="*" columns="auto, *">
             <label row="0" col="0" text="#"  class="icon-item {{item.category}}"></label>

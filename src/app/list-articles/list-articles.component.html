@@ -1,7 +1,7 @@
 <RadListView #listView [items]="dataSource" selectionBehavior="Press" (itemSelected)="onItemSelected($event)"
-    backgroundColor="white" class="list-items">
+ class="list-items">
     <ng-template let-item="item">
-        <GridLayout rows="*" columns="auto, *">
+        <GridLayout rows="*" columns="auto, *" class="item">
             <label row="0" col="0" text="#" class="icon-item {{item.category}}"></label>
             <StackLayout row="0" col="1" class="descript">
                 <Label text="{{item.tittle}}" class="title-item"></Label>

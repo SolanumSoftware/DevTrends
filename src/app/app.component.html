@@ -1,13 +1,14 @@
-<RadSideDrawer tkExampleTitle tkToggleNavButton>
-  <GridLayout tkDrawerContent rows="75, *" class="sideStackLayout">
+<RadSideDrawer gesturesEnabled="false" tkExampleTitle tkToggleNavButton>
+  <GridLayout tkDrawerContent rows="115, *" class="sideStackLayout">
     <StackLayout class="sideTitleStackLayout">
-      <Label>
+      <Label class="logo-menu">
         <FormattedString>
           <Span text="#" class="Logo-Hash"></Span>
           <Span text="Dev" class="Logo-Dev"></Span>
           <Span text="Trends" class="Logo-Trends"></Span>
         </FormattedString>
       </Label>
+      <label class="year-trend" text="{{date.getFullYear()}}"></label>
     </StackLayout>
     <ScrollView row="1">
       <menu></menu>

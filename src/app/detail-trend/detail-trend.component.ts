@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterExtensions } from '@nativescript/angular';
-import { MarkdownService } from '../../services/markdown.service'
-const marked = require("marked");
+import { LoadEventData } from '@nativescript/core';
 
 @Component({
 	selector: 'detail-trend',
@@ -12,22 +11,22 @@ const marked = require("marked");
 
 export class DetailTrendComponent implements OnInit {
 
-	urlFile: string;
+	load: boolean = true;
 	html: string = "";
 	constructor(
 		private activatedRoute: ActivatedRoute,
-		private router: RouterExtensions,
-		private markdownService: MarkdownService
+		private router: RouterExtensions
 	) { }
 
 	ngOnInit() { 
-		this.urlFile = this.activatedRoute.snapshot.paramMap.get("urlFile");
-		this.markdownService.getMarked(this.urlFile).subscribe(Response => {
-			this.html = marked(Response);
-		}, error => this.html = "");
+		this.html = this.activatedRoute.snapshot.paramMap.get("url");
 	}
 
 	back() {
 		this.router.back();
+	}
+
+	onLoadFinished(args: LoadEventData) {
+		this.load = false;
 	}
 }

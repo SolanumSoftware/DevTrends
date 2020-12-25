@@ -12,6 +12,7 @@ export class AppComponent implements AfterViewInit ,OnInit {
     
 	@ViewChild(RadSideDrawerComponent, { static: false }) public drawerComponent: RadSideDrawerComponent;
     private drawer: RadSideDrawer;
+    date = new Date();
 	constructor(
         private _changeDetectionRef: ChangeDetectorRef,
         private menuService: MenuService
@@ -24,7 +25,7 @@ export class AppComponent implements AfterViewInit ,OnInit {
 
 	ngOnInit() {
         this.menuService.MenuEvent.subscribe(Response => Response ? this.openDrawer(): this.onCloseDrawerTap());
-        
+        this.menuService.OptionTaped.subscribe(Response => this.onCloseDrawerTap());
     }
 
 	

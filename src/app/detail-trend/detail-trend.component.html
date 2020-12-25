@@ -1,4 +1,4 @@
-<ActionBar>
+<ActionBar androidElevation="0">
   <GridLayout rows="*" columns="40, *">
     <label row="0" col="0" class="fa icon-bar" text="&#xf053;" (tap)="back()"></label>
     <Label row="0" col="1" class="Logo">
@@ -11,7 +11,8 @@
   </GridLayout>
 </ActionBar>
 <StackLayout *ngIf="html.length > 0">
-  <WebView id="webView" [src]="html"></WebView>
+  <WebView id="webView" [src]="html" (loadStarted)="onLoadStarted($event)" 
+  (loadFinished)="onLoadFinished($event)"></WebView>
 </StackLayout>
 <StackLayout *ngIf="html.length == 0">
   <GridLayout class="c-message" rows="auto, *" columns="*">
@@ -20,3 +21,4 @@
       text="Ocurrio un problema de red, revise su conexión a internet e intentelo mas tarde"></label>
   </GridLayout>
 </StackLayout>
+<ActivityIndicator [busy]="load"></ActivityIndicator>

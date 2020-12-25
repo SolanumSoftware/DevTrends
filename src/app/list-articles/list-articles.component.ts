@@ -4,7 +4,9 @@ import { Articles } from '../../models/Articles.model';
 import * as Admob from "nativescript-admob";
 import { Router } from '@angular/router';
 import { ArticleService } from '../../services/articles.service';
-import { ListViewEventData} from 'nativescript-ui-listview';
+import { ListViewEventData } from 'nativescript-ui-listview';
+import { MenuService } from '../menu.service';
+import { Category } from 'src/Types/category.types';
 
 @Component({
 	selector: 'list-articles',
@@ -12,40 +14,43 @@ import { ListViewEventData} from 'nativescript-ui-listview';
 	styleUrls: ['./list-articles.component.css']
 })
 
-export class ListArticlesComponent implements OnInit, AfterViewInit {
-
-	private androidInterstitialId: string = "ca-app-pub-4435922828829303/5329219275";
-	data: Articles[] = [];
+export class ListArticlesComponent implements OnInit {
+	filter: Category = "All";
 	dataSource = new ObservableArray<Articles>();
 
 	constructor(
 		private articleService: ArticleService,
 		private router: Router,
-		private ngZone: NgZone
+		private ngZone: NgZone,
+		private menuService: MenuService
 	) { }
 
 	async ngOnInit() {
-		(await this.articleService.getArticles()).forEach( item => {
-			this.dataSource.push(<Articles>item.data());
+		
+		this.menuService.OptionTaped.subscribe(async (Response: Category) => {
+			this.filter = Response;
+			this.loadData();
 		});
+		this.loadData();
 	}
 
-	async ngAfterViewInit() {
-		/* await setTimeout(() => {
-			this.ngZone.run(() => {
-				Admob.preloadInterstitial({
-					testing: true,
-					androidInterstitialId: this.androidInterstitialId,
-				});
+	async loadData() {
+		this.dataSource = new ObservableArray<Articles>();
+		if (this.filter != 'All') {
+			(await this.articleService.getArticlesFilters(this.filter)).forEach(item => {
+				this.dataSource.push(<Articles>item.data());
 			});
-		}, 0); */
+		} else {
+			(await this.articleService.getArticles()).forEach(item => {
+				this.dataSource.push(<Articles>item.data());
+			});
+		}
 	}
-
-	async createSpam(urlFile: string) {
+	async createSpam(url: string) {
 		try {
 			await Admob.showInterstitial();
 			this.ngZone.run(() => {
-				this.router.navigate(['/detail', urlFile]);
+				this.router.navigate(['/detail', url]);
 			});
 		} catch (error) {
 			console.log("ads error", error);
@@ -54,6 +59,6 @@ export class ListArticlesComponent implements OnInit, AfterViewInit {
 
 	onItemSelected(args: ListViewEventData) {
 		const obj = this.dataSource.getItem(args.index);
-		this.createSpam(obj.urlFile);
+		this.createSpam(obj.url);
 	}
 }

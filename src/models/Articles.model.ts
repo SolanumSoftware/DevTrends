@@ -5,6 +5,6 @@ export class Articles {
     tittle:         string;
     description:    string;
     datePublish:    string;
-    urlFile:        string;
+    url:        string;
     category:       Category;
 }

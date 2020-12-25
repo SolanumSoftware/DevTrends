@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as firebase from "@nativescript/firebase/app";
 import { firestore } from '@nativescript/firebase/firebase';
-import { Articles } from "../models/Articles.model";
+import { Category } from 'src/Types/category.types';
 
 @Injectable({ providedIn: 'root' })
 export class ArticleService {
@@ -12,5 +12,9 @@ export class ArticleService {
 
     async getArticles() {
         return (await this.docRef.get({ source: "default" })).docs;
+    }
+
+    async getArticlesFilters(category: Category) {
+        return (await this.docRef.where("category","==",category).get({ source: "default"})).docs;
     }
 }

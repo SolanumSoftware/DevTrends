@@ -1,11 +1,12 @@
-<RadListView #listView [items]="dataSource" selectionBehavior="Press" (itemSelected)="onItemSelected($event)" backgroundColor="white" class="list-items">
+<RadListView #listView [items]="dataSource" selectionBehavior="Press" (itemSelected)="onItemSelected($event)"
+    backgroundColor="white" class="list-items">
     <ng-template let-item="item">
         <GridLayout rows="*" columns="auto, *">
-            <label row="0" col="0" text="#"  class="icon-item {{item.category}}"></label>
+            <label row="0" col="0" text="#" class="icon-item {{item.category}}"></label>
             <StackLayout row="0" col="1" class="descript">
-                <Label  text="{{item.tittle}}" class="title-item"></Label>
-                <label  text="{{item.description}}" class="desc-item f-mono" textWrap="true"></label>
-            </StackLayout>  
+                <Label text="{{item.tittle}}" class="title-item"></Label>
+                <label text="{{item.description}}" class="desc-item f-mono" textWrap="true"></label>
+            </StackLayout>
         </GridLayout>
     </ng-template>
 </RadListView>

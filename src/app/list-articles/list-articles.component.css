@@ -30,3 +30,14 @@
     padding-left: 3;
     padding-right: 3;
 }
+
+.icon-msg {
+    font-size: 50;
+}
+
+.c-message {
+    margin-top: 40%;
+    font-size: 15;
+    text-align: center;
+    color: rgb(214, 214, 214);
+}

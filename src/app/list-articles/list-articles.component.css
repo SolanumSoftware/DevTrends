@@ -29,6 +29,7 @@
 .list-items {
     padding-left: 3;
     padding-right: 3;
+    background-color: white;
 }
 
 .icon-msg {
@@ -41,3 +42,9 @@
     text-align: center;
     color: rgb(214, 214, 214);
 }
+
+:host-context(.ns-dark) .list-items {
+    background-color: darkslategrey;
+    color: white;
+}   
+

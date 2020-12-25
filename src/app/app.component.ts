@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, OnInit, ViewChild, ChangeDetectorRef } from "@angular/core";
-import { RadSideDrawer } from "nativescript-ui-sidedrawer";
+import { DrawerStateChangedEventArgs, RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { RadSideDrawerComponent } from "nativescript-ui-sidedrawer/angular";
 import { MenuService } from "./menu.service";
 import * as Admob from "nativescript-admob";
@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit ,OnInit {
 	@ViewChild(RadSideDrawerComponent, { static: false }) public drawerComponent: RadSideDrawerComponent;
     private drawer: RadSideDrawer;
     date = new Date();
+    gestures: boolean = false;
 	constructor(
         private _changeDetectionRef: ChangeDetectorRef,
         private menuService: MenuService
@@ -35,5 +36,13 @@ export class AppComponent implements AfterViewInit ,OnInit {
 
     public onCloseDrawerTap() {
         this.drawer.closeDrawer();
+    }
+
+    public onDrawerClosed(args: DrawerStateChangedEventArgs) {
+        this.gestures = false;
+    }
+
+    public onDrawerOpened(args: DrawerStateChangedEventArgs) {
+        this.gestures = true;
     }
 }

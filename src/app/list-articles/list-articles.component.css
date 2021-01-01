@@ -1,0 +1,57 @@
+.itemMenu {
+    padding: 5;
+    padding-left: 20;
+}
+
+.icon-item {
+    font-size: 25;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 2;
+}
+
+.title-item {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.title-item, .desc-item {
+    font-size: 17;
+}
+
+.desc-item {
+    font-size: 14;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+}
+
+.list-items {
+    padding-left: 3;
+    padding-right: 3;
+    background-color: white;
+}
+
+.icon-msg {
+    font-size: 50;
+}
+
+.c-message {
+    margin-top: 40%;
+    font-size: 15;
+    text-align: center;
+    color: rgb(214, 214, 214);
+}
+
+:host-context(.ns-dark) .list-items {
+    background-color: darkslategrey;
+    color: white;
+}   
+
+.publicator-review {
+    text-align: right;
+    width: auto;
+    font-weight: bold;
+    margin-left: auto;
+    border-radius: 5;
+}

@@ -1,0 +1,21 @@
+.itemMenu {
+    padding: 5;
+    padding-left: 20;
+}
+
+.icons-menu {
+    font-size: 20;
+    font-weight: bold;
+}
+
+.text-menu {
+    font-size: 17;
+}
+
+.active {
+    background-color: rgb(218, 218, 218);
+}
+
+:host-context(.ns-dark) .active {
+    background-color: #111111;
+}   

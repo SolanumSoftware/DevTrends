@@ -3,7 +3,10 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "@nativescript/angular";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
+    { path: "", redirectTo: "index", pathMatch: "full" },
+    { path: "index", loadChildren: () => import("./index/index.module").then(m => m.IndexModule) },
+    // :urlFile => the file extension it's a '.md' war file from github
+    { path: "detail/:url", loadChildren: () => import("./detail-trend/detail-trend.module").then(m => m.DetailTrendModule )}
 ];
 
 @NgModule({

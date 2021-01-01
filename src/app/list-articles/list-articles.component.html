@@ -1,0 +1,13 @@
+<RadListView #listView [items]="dataSource" selectionBehavior="Press" (itemSelected)="onItemSelected($event)"
+ class="list-items">
+    <ng-template let-item="item">
+        <GridLayout rows="*" columns="auto, *" class="item">
+            <label row="0" col="0" text="#" class="icon-item {{item.category}}"></label>
+            <StackLayout row="0" col="1" class="descript">
+                <Label text="{{item.tittle}}" class="title-item"></Label>
+                <label text="{{item.description}}" class="desc-item f-mono" textWrap="true"></label>
+                <Label class="publicator-review" text="{{item.autor}}" textWrap="true"></Label>
+            </StackLayout>      
+        </GridLayout>
+    </ng-template>
+</RadListView>

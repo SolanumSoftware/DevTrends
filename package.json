@@ -1,10 +1,15 @@
 {
-  "name": "@nativescript/template-hello-world-ng",
+  "name": "DevTrends",
   "main": "main.js",
   "version": "7.0.8",
   "author": "NativeScript Team <oss@nativescript.org>",
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
+  "scripts": {
+    "build:app-bundle": "tns build android --release --key-store-path ./keystore.jks --key-store-password devtrends --key-store-alias devtrends --key-store-alias-password solanumdevtrends --aab --copy-to ./devtrends.aab",
+    "test-build": "tns run android --key-store-path ./keystore.jks --key-store-password devtrends --key-store-alias devtrends --key-store-alias-password solanumdevtrends --aab"
+  
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -30,13 +35,19 @@
     "@angular/router": "~11.0.0",
     "@nativescript/angular": "~11.0.0",
     "@nativescript/core": "~7.0.0",
+    "@nativescript/firebase": "^11.1.3",
     "@nativescript/theme": "~3.0.0",
+    "nativescript-admob": "^4.1.0",
+    "nativescript-local-notifications": "^4.2.1",
+    "nativescript-ui-listview": "^9.0.4",
+    "nativescript-ui-sidedrawer": "^9.0.3",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.6.0",
     "zone.js": "~0.11.1"
   },
   "devDependencies": {
     "@angular/compiler-cli": "~11.0.0",
+    "@nativescript/android": "7.0.1",
     "@nativescript/types": "~7.0.0",
     "@nativescript/webpack": "~3.0.0",
     "@ngtools/webpack": "~11.0.0",

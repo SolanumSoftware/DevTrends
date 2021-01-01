@@ -1,0 +1,40 @@
+{
+    "project_info": {
+      "project_number": "805975839945",
+      "firebase_url": "https://devtrends-f50e2.firebaseio.com",
+      "project_id": "devtrends-f50e2",
+      "storage_bucket": "devtrends-f50e2.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:805975839945:android:5466288b15d36311146918",
+          "android_client_info": {
+            "package_name": "org.SolanumSoftware.DevTrends"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "805975839945-4b4u6q4plu8t7n4kh40deid3j3qdcqj2.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyC8JxF3mWxsc3L19onQG_YtiJkznLcdAzY"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "805975839945-4b4u6q4plu8t7n4kh40deid3j3qdcqj2.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

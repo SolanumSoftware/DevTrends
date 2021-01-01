@@ -1,0 +1,22 @@
+.Logo {
+    text-align: left;
+}
+
+.Logo-Hash, .Logo-Dev, .Logo-Trends {
+    font-size: 25;
+}
+
+.Logo-Hash {
+    color: #5B48CF;
+    font-weight: bold;
+}
+
+.Logo-Dev {
+    font-weight: bold;
+    color: #383737;
+}
+
+.Logo-Trends {
+    font-weight: 200;
+    font-style: italic;
+}

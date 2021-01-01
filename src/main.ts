@@ -9,7 +9,7 @@ import { LocalNotifications } from "nativescript-local-notifications";
 
 applicationOn(resumeEvent, (args: ApplicationEventData) => {
 	Admob.preloadInterstitial({
-    testing: true,
+    testing: false,
     androidInterstitialId: "ca-app-pub-4435922828829303/5329219275",
   });
 });

@@ -48,3 +48,10 @@
     color: white;
 }   
 
+.publicator-review {
+    text-align: right;
+    width: auto;
+    font-weight: bold;
+    margin-left: auto;
+    border-radius: 5;
+}

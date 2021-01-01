@@ -14,6 +14,7 @@ android {
     minSdkVersion 17
     generatedDensities = []
     multiDexEnabled true
+    targetSdkVersion 29
     applicationId = "org.SolanumSoftware.DevTrends"
   }
   aaptOptions {

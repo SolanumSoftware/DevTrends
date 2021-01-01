@@ -1,0 +1,10 @@
+Devtrens
+keyStorePath {
+	password: devtrends
+	confirm: devtrends
+}
+Key {
+	alias: devtrends
+	password: solanumdevtrends
+	confirm: solanumdevtrends
+}

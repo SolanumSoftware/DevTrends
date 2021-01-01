@@ -5,6 +5,11 @@
   "author": "NativeScript Team <oss@nativescript.org>",
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
+  "scripts": {
+    "build:app-bundle": "tns build android --release --key-store-path ./keystore.jks --key-store-password devtrends --key-store-alias devtrends --key-store-alias-password solanumdevtrends --aab --copy-to ./devtrends.aab",
+    "test-build": "tns run android --key-store-path ./keystore.jks --key-store-password devtrends --key-store-alias devtrends --key-store-alias-password solanumdevtrends --aab"
+  
+  },
   "publishConfig": {
     "access": "public"
   },

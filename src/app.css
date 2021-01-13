@@ -25,7 +25,7 @@ Button.-primary {
 }
 
 .BackEnd {
-    color: rgb(51, 51, 51);
+    color: blueviolet;
 }
 
 .FrontEnd {
@@ -97,7 +97,7 @@ Button.-primary {
 
 .Logo-Dev {
     font-weight: bold;
-    color: #383737;
+    color: black;
 }
 
 .Logo-Trends {
@@ -132,16 +132,4 @@ Button.-primary {
 .logo-menu {
     margin: 0;
     padding: 0;
-}
-
-:host-context(.ns-dark) .BackEnd {
-    color: cornflowerblue;
-}
-
-:host-context(.ns-dark) .Logo-Dev {
-    color: greenyellow;
-}
-
-:host-context(.ns-dark) .year-trend {
-    color: greenyellow;
 }

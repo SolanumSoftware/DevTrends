@@ -26,15 +26,10 @@
 
 .Logo-Dev {
     font-weight: bold;
-    color: #383737;
+    color: black;
 }
 
 .Logo-Trends {
     font-weight: 200;
     font-style: italic;
-}
-
-
-:host-context(.ns-dark) .Logo-Dev {
-    color: greenyellow;
 }

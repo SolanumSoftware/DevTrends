@@ -20,7 +20,7 @@
 
 .Logo-Dev {
     font-weight: bold;
-    color: #383737;
+    color: black;
 }
 
 .Logo-Trends {
@@ -30,8 +30,4 @@
 
 .icon-msg {
     font-size: 50;
-}
-
-:host-context(.ns-dark) .Logo-Dev {
-    color: greenyellow;
 }

@@ -1,0 +1,47 @@
+<ActionBar androidElevation="0">
+    <GridLayout rows="*" columns="40, *">
+        <label row="0" col="0" class="fa icon-bar" text="&#xf053;" (tap)="back()"></label>
+        <Label row="0" col="1" class="Logo">
+            <FormattedString>
+                <Span text="#" class="Logo-Hash"></Span>
+                <Span text="Dev" class="Logo-Dev"></Span>
+                <Span text="Trends" class="Logo-Trends"></Span>
+            </FormattedString>
+        </Label>
+    </GridLayout>
+</ActionBar>
+<ScrollView>
+    <StackLayout class="content">
+        <Label text="About" class="tittle" textWrap="true"></Label>
+        <Label text="DevTrends es una aplicación open source creada con el framework de nativescript para la comunidad de desarrolladores, ingenieros de sistemas y freelancers, con el fin de brindar información acerca de las tendencias en el mundo del desarrollo." textWrap="true"></Label>
+        <Label class="item">
+            <FormattedString>
+                <span text="&#xf120;" class="fa icon-bar"></span>
+                <span text=" by SolanumSoftware"></span>
+            </FormattedString>
+        </Label>
+        
+        <button (tap)="link('https://github.com/SolanumSoftware/DevTrends')" class="item">
+            <FormattedString>
+                <span text="&#xf09b;" class="fa icon-bar"></span>
+                <span text=" Repositorio"></span>
+            </FormattedString>
+        </button>
+    
+        <Label text="Desarrolladores principales" textWrap="true"></Label>
+
+        <button class="item" (tap)="link('https://github.com/andr11s')">
+            <FormattedString>
+                <span text="&#xf09b;" class="fa icon-bar"></span>
+                <span text=" github.com/andr11s"></span>
+            </FormattedString>
+        </button>
+    
+        <button class="item" (tap)="link('https://github.com/Roybermahe')">
+            <FormattedString>
+                <span text="&#xf09b;" class="fa icon-bar"></span>
+                <span text=" github.com/Roybermahe"></span>
+            </FormattedString>
+        </button>
+    </StackLayout>
+</ScrollView>

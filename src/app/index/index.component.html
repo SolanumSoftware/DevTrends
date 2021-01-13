@@ -1,5 +1,5 @@
 <ActionBar androidElevation="0" >
-  <GridLayout rows="*" columns="40, *">
+  <GridLayout rows="*" columns="40, *,auto">
     <label row="0" col="0" class="fa icon-bar" text="&#xf0c9;" (tap)="openMenu()"></label>
     <Label row="0" col="1" class="Logo">
       <FormattedString>
@@ -8,6 +8,7 @@
         <Span text="Trends" class="Logo-Trends"></Span>
       </FormattedString>
     </Label>
+    <Label row="0" col="2" text="&#xf129;" textWrap="true"  [nsRouterLink]="['/about']" class="fa icon-bar"></Label>
   </GridLayout>
 </ActionBar>
 <StackLayout>

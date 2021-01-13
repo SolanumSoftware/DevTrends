@@ -1,9 +1,15 @@
-.c-message {
-    margin-top: 40%;
-    font-size: 15;
-    text-align: center;
-    color: rgb(214, 214, 214);
+.tittle {
+    font-size: 25;
 }
+
+.item {
+    margin-top: 7;
+}
+
+.content {
+    padding: 25;
+}
+
 
 .Logo {
     text-align: left;
@@ -28,9 +34,6 @@
     font-style: italic;
 }
 
-.icon-msg {
-    font-size: 50;
-}
 
 :host-context(.ns-dark) .Logo-Dev {
     color: greenyellow;

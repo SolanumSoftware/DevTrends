@@ -80,8 +80,9 @@ Button.-primary {
     color: #9936D7;
 }
 .sideTitleStackLayout {
-    padding: 10;
-    margin-top: 15;
+    padding: 10%;
+    margin-top: 5%;
+    height: 115;
     text-align: center;
 }
 
@@ -131,4 +132,16 @@ Button.-primary {
 .logo-menu {
     margin: 0;
     padding: 0;
+}
+
+:host-context(.ns-dark) .BackEnd {
+    color: cornflowerblue;
+}
+
+:host-context(.ns-dark) .Logo-Dev {
+    color: greenyellow;
+}
+
+:host-context(.ns-dark) .year-trend {
+    color: greenyellow;
 }
